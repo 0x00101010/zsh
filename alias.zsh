@@ -108,7 +108,9 @@ alias fl='fh view-local'
 alias dc='docker compose'
 alias de='docker exec -it'
 alias dl='docker logs'
-alias dp='docker ps'
+alias dp='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}"'
 alias dpg='docker ps | grep'
 
 alias protoc='protoc --proto_path=./third_party'
+
+alias docker
