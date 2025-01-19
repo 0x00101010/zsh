@@ -37,7 +37,6 @@ alias rd='rm -rf' # remove directory and file
 
 # misc.
 alias q='exit'                                                                                # vim like quit command to close terminal pane
-alias c='clear'                                                                               # clear terminal
 alias o='open'                                                                                # open file or chrome with full url
 alias myip="ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'" # show my ip
 alias pingg='ping www.google.com'                                                             # See network speed against google.com
@@ -54,7 +53,7 @@ alias gca='git commit -v --amend'
 alias gc='git commit'
 alias gempty="git commit --allow-empty -m 'empty'"
 alias gps='git push origin $(git branch --show-current)'
-alias gpu='git pull origin $(git branch --show-current)'
+alias gpu='git push upstream $(git branch --show-current)'
 alias gpsf='git push francis $(git branch --show-current)'
 
 # Branch Management
@@ -113,4 +112,5 @@ alias dpg='docker ps | grep'
 
 alias protoc='protoc --proto_path=./third_party'
 
-alias docker
+alias cu='cursor'
+alias co='code'
