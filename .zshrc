@@ -49,7 +49,6 @@ if which cargo &> /dev/null; then
   export PATH="$(asdf where rust)/bin:$HOME/.cargo/bin:$PATH"
 fi
 
-
 # helping with prysm tests
 export CGO_CFLAGS="-O2 -D__BLST_PORTABLE__"
 
