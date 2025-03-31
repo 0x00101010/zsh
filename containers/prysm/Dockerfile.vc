@@ -1,0 +1,16 @@
+FROM golang:1.23 AS builder
+WORKDIR /app
+
+COPY go.mod go.sum ./
+RUN go mod download
+
+COPY . .
+
+RUN go build -o bin/validator   ./cmd/validator
+
+FROM ubuntu:24.04
+RUN apt-get update && apt-get install -y curl vim
+
+COPY --from=builder /app/bin/validator  /usr/local/bin/validator
+
+ENTRYPOINT ["/usr/local/bin/validator"]
