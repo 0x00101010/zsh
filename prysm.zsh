@@ -18,7 +18,7 @@ devnet() {
     kurtosis clean -a &&
         docker buildx build --file ~/.zsh/containers/prysm/Dockerfile . -t prysm-bn-custom-image &&
         docker tag prysm-bn-custom-image prysm-vc-custom-image &&
-        kurtosis run github.com/ethpandaops/ethereum-package --args-file=~/.zsh/kurtosis/$1.yaml &&
+        kurtosis run github.com/ethpandaops/ethereum-package --args-file="$HOME/.zsh/kurtosis/$1.yaml" &&
         dora
 }
 
