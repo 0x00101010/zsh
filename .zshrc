@@ -29,13 +29,14 @@ source $ZSH/oh-my-zsh.sh
 
 [[ -s "$HOME/.asdf/asdf.sh" ]] && source "$HOME/.asdf/asdf.sh"                          # source asdf
 
-[[ -s "$HOME/.zsh/home.zsh" ]] && source "$HOME/.zsh/home.zsh"                         # load home specific variables
+[[ -s "$HOME/.zsh/home.zsh" ]] && source "$HOME/.zsh/home.zsh"                          # load home specific variables
 [[ -s "$HOME/.zsh/local.zsh" ]] && source "$HOME/.zsh/local.zsh"                        # load environment variables and secret keys
 [[ -s "$HOME/.zsh/scripts.zsh" ]] && source "$HOME/.zsh/scripts.zsh"                    # load functions
 [[ -s "$HOME/.zsh/alias.zsh" ]] && source "$HOME/.zsh/alias.zsh"                        # load aliases
 [[ -s "$HOME/.zsh/ctrl-z.zsh" ]] && source "$HOME/.zsh/ctrl-z.zsh"                      # load ctrl-z command
 [[ -s "$HOME/.zsh/zsh-autocomplete.zsh" ]] && source "$HOME/.zsh/zsh-autocomplete.zsh"  # load zsh-autocomplete
 [[ -s "$HOME/.zsh/key-binding.zsh" ]] && source "$HOME/.zsh/key-binding.zsh"            # load key bindings
+[[ -s "$HOME/.zsh/prysm.zsh" ]] && source "$HOME/.zsh/prysm.zsh"                        # load prysm development related helpers
 
 [[ -s "$HOME/.zsh/cb.zsh" ]] && source "$HOME/.zsh/cb.zsh"                              # load cb env vars
 [[ -s "$HOME/.zsh/salus.zsh" ]] && source "$HOME/.zsh/salus.zsh"                        # load salus command
@@ -61,7 +62,7 @@ esac
 # pnpm end
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+# export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load

@@ -114,3 +114,10 @@ alias protoc='protoc --proto_path=./third_party'
 
 alias cu='cursor'
 alias co='code'
+
+# kubernetes
+alias k='kubectl'
+alias kx='kubectx'
+alias kn='kubens'
+
+alias tar='gtar'
