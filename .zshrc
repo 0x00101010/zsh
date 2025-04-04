@@ -21,7 +21,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  asdf
   virtualenv
 )
 
@@ -36,7 +35,7 @@ source $ZSH/oh-my-zsh.sh
 [[ -s "$HOME/.zsh/ctrl-z.zsh" ]] && source "$HOME/.zsh/ctrl-z.zsh"                      # load ctrl-z command
 [[ -s "$HOME/.zsh/zsh-autocomplete.zsh" ]] && source "$HOME/.zsh/zsh-autocomplete.zsh"  # load zsh-autocomplete
 [[ -s "$HOME/.zsh/key-binding.zsh" ]] && source "$HOME/.zsh/key-binding.zsh"            # load key bindings
-[[ -s "$HOME/.zsh/prysm.zsh" ]] && source "$HOME/.zsh/prysm.zsh"                        # load prysm development related helpers
+[[ -s "$HOME/.zsh/devnet.zsh" ]] && source "$HOME/.zsh/devnet.zsh"                        # load devnet development related helpers
 
 [[ -s "$HOME/.zsh/cb.zsh" ]] && source "$HOME/.zsh/cb.zsh"                              # load cb env vars
 [[ -s "$HOME/.zsh/salus.zsh" ]] && source "$HOME/.zsh/salus.zsh"                        # load salus command
