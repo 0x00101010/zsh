@@ -2,8 +2,12 @@ participants:
   # Prysm
   - cl_type: prysm
     count: 2
-    el_type: geth
-    el_image: geth:peerdas
+    # el_type: geth
+    # el_image: geth:peerdas
+    # el_type: geth
+    # el_image: ethpandaops/geth:marius-engine-getblobs-v2
+    el_type: nethermind
+    el_image: ethpandaops/nethermind:feature-peerdas
     # el_image: ethpandaops/geth:engine-getblobs-v2-e2cac9a
     cl_image: prysm-bn:peerdas
     vc_image: prysm-vc:peerdas
@@ -20,8 +24,12 @@ participants:
 
   # Prysm
   - cl_type: prysm
-    el_type: geth
-    el_image: geth:peerdas
+    # el_type: geth
+    # el_image: ethpandaops/geth:marius-engine-getblobs-v2
+    # el_type: geth
+    # el_image: geth:peerdas
+    el_type: nethermind
+    el_image: ethpandaops/nethermind:feature-peerdas
     # el_image: ethpandaops/geth:engine-getblobs-v2-e2cac9a
     cl_image: prysm-bn:peerdas
     vc_image: prysm-vc:peerdas
@@ -45,7 +53,7 @@ additional_services:
   - dora
   - spamoor_blob
   - prometheus_grafana
-dora_params:
-  image: ethpandaops/dora:fulu-support
-spamoor_blob_params:
-  throughput: 16
+# dora_params:
+#   image: ethpandaops/dora:fulu-support
+# spamoor_blob_params:
+#   throughput: 16

@@ -22,11 +22,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
   git
   virtualenv
+  asdf
 )
 
 source $ZSH/oh-my-zsh.sh
-
-[[ -s "$HOME/.asdf/asdf.sh" ]] && source "$HOME/.asdf/asdf.sh"                          # source asdf
 
 [[ -s "$HOME/.zsh/home.zsh" ]] && source "$HOME/.zsh/home.zsh"                          # load home specific variables
 [[ -s "$HOME/.zsh/local.zsh" ]] && source "$HOME/.zsh/local.zsh"                        # load environment variables and secret keys
@@ -41,9 +40,12 @@ source $ZSH/oh-my-zsh.sh
 [[ -s "$HOME/.zsh/salus.zsh" ]] && source "$HOME/.zsh/salus.zsh"                        # load salus command
 export XCODE_13_UPGRADE=true
 
-if which go &> /dev/null; then
-  export PATH="$(go env GOPATH)/bin:$PATH"
-fi
+# setup ASDF
+export PATH="${ASDF_DATA_DIR-$HOME/.asdf}/shims:$PATH"
+
+# if which go &> /dev/null; then
+#   export PATH="$(go env GOPATH)/bin:$PATH"
+# fi
 
 # if which cargo &> /dev/null; then
 #   export PATH="$(asdf where rust)/bin:$HOME/.cargo/bin:$PATH"
