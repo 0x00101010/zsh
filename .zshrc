@@ -43,9 +43,9 @@ export XCODE_13_UPGRADE=true
 # setup ASDF
 export PATH="${ASDF_DATA_DIR-$HOME/.asdf}/shims:$PATH"
 
-# if which go &> /dev/null; then
-#   export PATH="$(go env GOPATH)/bin:$PATH"
-# fi
+if which go &> /dev/null; then
+  export PATH="$(go env GOPATH)/bin:$PATH"
+fi
 
 # if which cargo &> /dev/null; then
 #   export PATH="$(asdf where rust)/bin:$HOME/.cargo/bin:$PATH"
